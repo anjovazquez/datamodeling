@@ -48,6 +48,10 @@ python etl.py
 
 ## Results
 
+### Database diagram
+
+![Database diagram](https://github.com/anjovazquez/datamodeling/blob/main/StarDiagram.png)
+
 ### Database query
 ```sql
 SELECT * FROM songplays sp 
