@@ -48,12 +48,15 @@ python etl.py
 
 ## Results
 
+### Database query
 ```sql
 SELECT * FROM songplays sp 
 JOIN artists a ON a.artist_id = sp.artist_id 
 JOIN songs s ON s.song_id = sp.song_id 
 JOIN "time" t ON t.start_time = sp.start_time 
 ```
+
+### Expected result after executing etl.py
 
 Name     |Value             |
 ---------|------------------|
@@ -62,6 +65,7 @@ title    |Setanta matins    |
 artist_id|AR5KOSW1187FB35FF4|
 year     |0                 |
 duration |269.58322         |
+
 
 songplay_id|start_time         |user_id|level|song_id           |artist_id         |session_id|location                          |user_agent                                                                                                                               |artist_id         |name |location |latitude|longitude|song_id           |title         |artist_id         |year|duration |start_time         |hour|day|week|month|year|weekday|
 -----------|-------------------|-------|-----|------------------|------------------|----------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|------------------|-----|---------|--------|---------|------------------|--------------|------------------|----|---------|-------------------|----|---|----|-----|----|-------|
