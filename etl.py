@@ -42,7 +42,7 @@ def process_log_file(cur, filepath):
     # convert timestamp column to datetime
     t = pd.to_datetime(df['ts'], unit='ms')
 
-    extend_data_frame_model_with_time_data(df, t)
+    df = extend_data_frame_model_with_time_data(df, t)
 
     time_add_records(cur, df)
 
@@ -77,6 +77,7 @@ def extend_data_frame_model_with_time_data(df, t):
     df['month'] = df['start_time'].dt.month
     df['year'] = df['start_time'].dt.year
     df['weekday'] = df['start_time'].dt.weekday
+    return df
 
 
 def time_add_records(cur, df):
