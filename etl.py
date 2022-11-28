@@ -68,6 +68,8 @@ def process_log_file(cur, filepath):
 
 
 def extend_data_frame_model_with_time_data(df, t):
+    """Add new columns do dataframe splitting start_time in order to have detailed date information for data
+    analytics"""
     df['start_time'] = t
     df['hour'] = df['start_time'].dt.hour
     df['day'] = df['start_time'].dt.day
